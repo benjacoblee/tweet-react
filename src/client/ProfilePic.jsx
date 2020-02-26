@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { OverlayTrigger, Tooltip, Popover } from "react-bootstrap";
 import Profile from "./Profile";
 

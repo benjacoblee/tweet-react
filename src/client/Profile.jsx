@@ -3,7 +3,6 @@ import React, { Component } from "react";
 export class Profile extends Component {
   render() {
     const tweetInfo = this.props.tweetInfo;
-    console.log(tweetInfo);
     return (
       <div>
         <p>{tweetInfo.user.screen_name}</p>

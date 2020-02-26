@@ -25,7 +25,7 @@ export class Card extends Component {
       const profilePic = tweet.user.profile_image_url;
       // console.log(tweet)
       return (
-        <div class="row">
+        <div class="row card">
           <div class="col-2">
             <ProfilePic profilePic={profilePic} tweetInfo={tweet} />
           </div>
@@ -41,7 +41,6 @@ export class Card extends Component {
               favoriteCount={favoriteCount}
             />
           </div>
-          <hr />
         </div>
       );
     });
