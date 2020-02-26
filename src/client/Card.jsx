@@ -25,21 +25,21 @@ export class Card extends Component {
       const profilePic = tweet.user.profile_image_url;
       // console.log(tweet)
       return (
-        <div class="row card">
-          <div class="col-2">
+        <div class="card">
+          <div class="row">
             <ProfilePic profilePic={profilePic} tweetInfo={tweet} />
-          </div>
-          <div class="col-10">
-            <Name userName={userName} createdAt={createdAt} />
-            <Tweet
-              tweetText={stringWithoutLink(tweetText)}
-              tweetLink={linkWithoutString(tweetText)}
-            />
-            <Entities entities={entities} />
-            <Engagement
-              retweetCount={retweetCount}
-              favoriteCount={favoriteCount}
-            />
+            <div class="col-10">
+              <Name userName={userName} createdAt={createdAt} />
+              <Tweet
+                tweetText={stringWithoutLink(tweetText)}
+                tweetLink={linkWithoutString(tweetText)}
+              />
+              <Entities entities={entities} />
+              <Engagement
+                retweetCount={retweetCount}
+                favoriteCount={favoriteCount}
+              />
+            </div>
           </div>
         </div>
       );

@@ -24,7 +24,7 @@ export class ProfilePic extends Component {
       </Popover>
     );
     return (
-      <div>
+      <div class="col-2">
         <OverlayTrigger
           placement="right"
           delay={{ show: 250, hide: 400 }}
