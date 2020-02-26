@@ -27,7 +27,7 @@ export class Card extends Component {
       return (
         <div class="row">
           <div class="col-2">
-            <ProfilePic profilePic={profilePic} />
+            <ProfilePic profilePic={profilePic} tweetInfo={tweet} />
           </div>
           <div class="col-10">
             <Name userName={userName} createdAt={createdAt} />

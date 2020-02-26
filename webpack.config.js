@@ -1,40 +1,45 @@
-const {resolve, join} = require('path');
-const webpack = require('webpack');
+const { resolve, join } = require("path");
+const webpack = require("webpack");
 
-const IS_DEV = process.env.NODE_ENV !== 'production';
+const IS_DEV = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  mode: 'production',
-  target: 'web',
-  entry: ['./src/client/index.jsx'],
+  mode: "production",
+  target: "web",
+  entry: ["./src/client/index.jsx"],
   output: {
-    publicPath: '/',
-    path: resolve(__dirname, 'public'),
-    filename: '[name].js'
+    publicPath: "/",
+    path: resolve(__dirname, "public"),
+    filename: "[name].js"
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader'],
+        use: ["babel-loader"],
         exclude: /node_modules/
       },
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        loader: "html-loader"
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        loader: 'file-loader'
+        loader: "file-loader"
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loaders: ["style-loader", "css-loader"]
       }
     ]
   },
   resolve: {
-    modules: ['node_modules', join('src', 'client')],
-    extensions: ['.js', '.jsx']
+    modules: ["node_modules", join("src", "client")],
+    extensions: [".js", ".jsx"]
   },
   stats: {
-    assetsSort: '!size',
+    assetsSort: "!size",
     children: false,
     chunks: false,
     colors: true,

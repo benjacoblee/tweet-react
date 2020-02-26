@@ -42,6 +42,7 @@ app.get("/react", (req, res) => {
         <h1 class="text-center my-5">Kanye's Timeline</h1>
         <div id="app"></div>
         <script type="text/javascript" src="/main.js"></script>
+        <script src="https://unpkg.com/react-popper/dist/index.umd.js"></script>
       </body>
     </html>
   `;
