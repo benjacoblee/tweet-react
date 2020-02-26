@@ -5,7 +5,7 @@ export class Name extends Component {
     return (
       <div>
         <p>
-          @{this.props.userName} {this.props.createdAt}
+          <strong>@{this.props.userName}</strong> {this.props.createdAt}
         </p>
       </div>
     );

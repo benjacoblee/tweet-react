@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Name from "./Name";
 import Tweet from "./Tweet";
 import Engagement from "./Engagement";
+import Entities from "./Entities"
 
 export class Card extends Component {
   render() {
@@ -13,10 +14,12 @@ export class Card extends Component {
       const retweetCount = tweet.retweet_count;
       const favoriteCount = tweet.favorite_count;
       const createdAt = tweet.created_at
+      const entities = tweet.entities;
       return (
         <div>
           <Name userName={userName} createdAt={createdAt} />
           <Tweet tweetText={tweetText} />
+          <Entities entities={entities} />
           <Engagement
             retweetCount={retweetCount}
             favoriteCount={favoriteCount}
