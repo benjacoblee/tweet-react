@@ -39,7 +39,7 @@ app.get("/react", (req, res) => {
       </script>
     </head>
       <body>
-        <h1 class="text-center">Kanye's Timeline</h1>
+        <h1 class="text-center my-5">Kanye's Timeline</h1>
         <div id="app"></div>
         <script type="text/javascript" src="/main.js"></script>
       </body>

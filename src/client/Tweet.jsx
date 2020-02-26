@@ -5,7 +5,7 @@ export class Tweet extends Component {
     return (
       <div>
         <p>
-          {this.props.tweetText}{" "}
+          {this.props.tweetText}
           <a href={this.props.tweetLink}>Link goes somewhere</a>
         </p>
       </div>
