@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require("express");
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 process.env.PORT = process.env.PORT || 3000;
 
@@ -12,7 +12,7 @@ const app = express();
  * =======================================================================
  */
 
-app.use('/', express.static('public'));
+app.use("/", express.static("public"));
 
 /*
  * =======================================================================
@@ -20,7 +20,7 @@ app.use('/', express.static('public'));
  * =======================================================================
  */
 
-app.get('/banana', (request, response)=>{
+app.get("/banana", (request, response) => {
   response.send("ehllo");
 });
 
@@ -30,17 +30,22 @@ app.get('/banana', (request, response)=>{
  * =======================================================================
  */
 
-app.get('/react', (req, res) => {
+app.get("/react", (req, res) => {
   const myHtml = `
     <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://kit.fontawesome.com/b6c2f93973.js" crossorigin="anonymous">
+      </script>
+    </head>
       <body>
-        <h1>Wow, react</h1>
+        <h1 class="text-center">Kanye's Timeline</h1>
         <div id="app"></div>
         <script type="text/javascript" src="/main.js"></script>
       </body>
     </html>
   `;
-  res.send( myHtml );
+  res.send(myHtml);
 });
 
 /*
@@ -50,5 +55,7 @@ app.get('/react', (req, res) => {
  */
 
 app.listen(process.env.PORT, () => {
-  console.log(`ssssserver is now running on http://localhost:${process.env.PORT}`);
+  console.log(
+    `ssssserver is now running on http://localhost:${process.env.PORT}`
+  );
 });
